@@ -8,5 +8,5 @@ module.exports = function countBreakLines (input = '', columns = Infinity) {
   for (const line of input.split('\n')) {
     count += Math.max(1, Math.ceil(wcwidth(line) / columns))
   }
-  return count
+  return count - 1
 }
